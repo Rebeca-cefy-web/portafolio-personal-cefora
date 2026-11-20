@@ -1,0 +1,6 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+{% block titulo %}Contacto{% endblock %}
+{% block contenido %}
+<section class="page" id="contacto"><div class="shell section"><div class="eyebrow">Hablemos</div><h2>Contacto</h2><p>Si deseas conocer mis proyectos, puedes visitar mi perfil de GitHub. También puedes probar este formulario de demostración.</p><p><a class="btn alt" href="https://github.com/Rebeca-cefy-web" rel="noopener noreferrer" target="_blank">Ver mi GitHub ↗</a></p><form class="contact card" id="contactForm" novalidate=""><label class="field">Nombre<input autocomplete="name" id="nombre" placeholder="Tu nombre"/></label><label class="field">Correo electrónico<input autocomplete="email" id="correo" placeholder="nombre@ejemplo.com" type="email"/></label><label class="field">Mensaje<textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea></label><button class="btn" type="submit">Enviar mensaje</button><div aria-live="polite" class="notice" id="formNotice"></div><p class="note">Este formulario no envía datos a un servidor.</p></form></div></section>
+{% endblock %}

@@ -1,0 +1,6 @@
+document.addEventListener('DOMContentLoaded',()=>{
+ const nav=document.getElementById('navLinks'), menu=document.getElementById('menuToggle');
+ if(menu&&nav)menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
+ document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('selected',x===b));document.querySelectorAll('[data-tags]').forEach(card=>{card.hidden=b.dataset.filter!=='todos'&&!card.dataset.tags.split(' ').includes(b.dataset.filter)})}));
+ const form=document.getElementById('contactForm');if(form)form.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('nombre').value.trim(),email=document.getElementById('correo').value.trim(),msg=document.getElementById('mensaje').value.trim(),notice=document.getElementById('formNotice');if(!name||!email||!msg){notice.style.color='#a13d36';notice.textContent='Por favor, completa todos los campos.';return}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){notice.style.color='#a13d36';notice.textContent='Escribe un correo electrónico válido.';return}notice.style.color='#1e694f';notice.textContent='¡Formulario validado! Este es un mensaje de demostración.';form.reset()});
+});

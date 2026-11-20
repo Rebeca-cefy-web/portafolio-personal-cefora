@@ -1,0 +1,6 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+{% block titulo %}Página no encontrada{% endblock %}
+{% block contenido %}
+<section class="page" id="error-404"><div class="shell error-center"><div class="error-num">404</div><h2>Página no encontrada</h2><p>La dirección que buscas no existe en este portafolio.</p><a class="btn" href="{% url 'inicio' %}">Volver al inicio</a></div></section>
+{% endblock %}

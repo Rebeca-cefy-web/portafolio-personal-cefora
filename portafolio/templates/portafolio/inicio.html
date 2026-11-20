@@ -1,0 +1,6 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+{% block titulo %}Inicio{% endblock %}
+{% block contenido %}
+<section class="page active" id="inicio"><div class="shell hero"><div><div class="eyebrow">Bienvenidos a mi portafolio</div><h1>Hola, soy<br/>Cefora Rebeca.</h1><p class="lead">Estudio el cuarto semestre del Técnico Universitario en Sistemas Informáticos y estoy por finalizar mi formación técnica. También soy Perito Contador y trabajo como auxiliar contable.</p><p>Me gusta aprender programación, trabajar en Visual Studio Code y descubrir cómo convertir mis ideas en proyectos web.</p><div class="actions"><a class="btn" href="{% url 'proyectos' %}">Ver mis proyectos</a><a class="btn alt" href="{% url 'contacto' %}">Contáctame</a></div></div><div class="portrait"><div class="avatar"><img alt="Avatar ilustrado de Cefora Rebeca" src="{% static 'portafolio/img/foto_1.jpg' %}"/></div><div class="tag">Informática + Contabilidad</div></div></div><div class="strip"><div class="shell"><div class="eyebrow">Lo que encontrarás aquí</div><div class="grid"><div><h3>Mi historia</h3><p>Mi formación y experiencia.</p></div><div><h3>Mis habilidades</h3><p>Herramientas que estoy aprendiendo.</p></div><div><h3>Mis proyectos</h3><p>Ejercicios y trabajos del curso.</p></div></div></div></div></section>
+{% endblock %}
